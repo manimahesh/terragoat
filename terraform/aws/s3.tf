@@ -21,6 +21,8 @@ resource "aws_s3_bucket" "data" {
   versioning {
     enabled = "${var.versioning_enabled}"
   }
+  hosted_zone_id = "Z3BJ6K6RIION7M"
+  request_payer = "BucketOwner"
 }
 
 resource "aws_s3_bucket_object" "data_object" {
